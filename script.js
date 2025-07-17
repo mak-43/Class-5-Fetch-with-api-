@@ -7,9 +7,10 @@ function bringData(){
         
         return response.json()
     }).then( (data)=>{
-        data.forEach(element => {
+        data.forEach((element,i) => {
+            console.log(i)
             const postDiv= document.createElement('div')
-            
+            postDiv.className='post'
             const titleDiv=document.createElement('div')
             const idDiv=document.createElement('div')
             const bodyDiv=document.createElement('div')
